@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Assistant API</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .api-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .api-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Financial Assistant API</h1>
+        <p>Welcome to the API for our AI-powered financial assistant.</p>
+        <p>Use the links below to access the API endpoints.</p>
+        {% comment %} <p> AAPL GOOG MSFT AMZN TSLA</p> {% endcomment %}
+        <a href="/api/recommend/GOOG" class="api-link">Get Recommendation for GOOG</a>
+        <a href="/api/forecast/GOOG" class="api-link">Get Forecast for GOOG</a>
+        <a href="/api/percentage/GOOG" class="api-link">Get Percentage Change for GOOG</a>
+        <a href="/api/sentiment/The%20company%20reported%20strong%20earnings." class="api-link">Get Sentiment Analysis</a>
+        <a href="/api/percentage/GOOG" class="api-link">News realted GOOG</a>
+    </div>
+</body>
+</html>

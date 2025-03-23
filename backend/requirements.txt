@@ -1,0 +1,8 @@
+yfinance
+pandas
+flask 
+prophet
+google-generativeai
+transformers
+python-dotenv
+pytest
