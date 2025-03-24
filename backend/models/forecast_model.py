@@ -15,10 +15,15 @@ def forecast_stock(data: pd.DataFrame) -> pd.DataFrame:
 
         model = Prophet()
         model.fit(df)
-        future = model.make_future_dataframe(periods=30)
+        future = model.make_future_dataframe(periods=1)
         forecast = model.predict(future)
-        return forecast
+        
+        # Extract the predicted price and date
+        predicted_price = forecast['yhat'].iloc[-1]
+        predicted_date = forecast['ds'].iloc[-1].date()  # Format to only display the date part
+        
+        return forecast, predicted_price, predicted_date
 
     except Exception as e:
         print(f"Error forecasting stock: {e}")
-        return pd.DataFrame()
+        return pd.DataFrame(), None, None

@@ -6,3 +6,4 @@ google-generativeai
 transformers
 python-dotenv
 pytest
+scikit-learn

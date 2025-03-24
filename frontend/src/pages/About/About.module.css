@@ -1,0 +1,239 @@
+/* Global Styles */
+.container {
+    min-height: 100vh;
+    background-color: #0a0f1f;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a1f2e;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navLeft .logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.navButton:hover {
+    background-color: #4338ca;
+}
+
+/* About Section */
+.aboutSection {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.aboutTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.aboutDescription {
+    font-size: 1.25rem;
+    color: #d1d5db;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.teamSection {
+    margin-top: 4rem;
+}
+
+.teamTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.teamMembers {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.teamMember {
+    width: 190px;
+    height: 120px;
+    padding: 0.5rem;
+    background: rgba(198, 198, 198, 0.34);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+    border-left: 2px rgba(255, 255, 255, 0.545) outset;
+    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+    transform: skewX(10deg);
+    transition: 0.4s;
+    overflow: hidden;
+    color: white;
+    position: relative;
+}
+
+.teamMember:hover {
+    height: 254px;
+    transform: skew(0deg);
+}
+
+.align {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-self: flex-start;
+}
+
+.red {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff605c;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.yellow {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffbd44;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.green {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00ca4e;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.teamMemberName {
+    text-align: center;
+    margin: 1.3rem;
+    color: rgb(218, 244, 237);
+    text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+}
+
+.teamMemberDetails {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.teamMember:hover .teamMemberDetails {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.teamMemberRole {
+    font-size: 1.1rem;
+    color: #9ca3af;
+    margin-bottom: 1rem;
+}
+
+.teamMemberContact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contactLink {
+    color: #4f46e5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+    color: #4338ca;
+}
+
+/* Footer */
+.footer {
+    padding: 2rem;
+    background-color: #1a1f2e;
+    text-align: center;
+}
+
+.footerText {
+    font-size: 1rem;
+    color: #9ca3af;
+}
+
+/* Search Button */
+.searchButton {
+    background-color: #4f46e5;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.searchButton:hover {
+    background-color: #4338ca;
+}
+
+.searchButton svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+         flex-direction: column;
+         padding: 1rem;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 1rem;
+    }
+    .navRight {
+         flex-direction: column;
+         gap: 0.5rem;
+         order: 3;
+         width: 100%;
+         justify-content: center;
+    }
+    .aboutSection {
+         padding: 2rem 1rem;
+    }
+    .teamMembers {
+         flex-direction: column; /* Stack team members vertically */
+         gap: 1rem;
+    }
+}
