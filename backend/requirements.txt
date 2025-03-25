@@ -7,3 +7,4 @@ transformers
 python-dotenv
 pytest
 scikit-learn
+flask-cors
