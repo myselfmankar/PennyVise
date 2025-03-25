@@ -1,6 +1,6 @@
 yfinance
 pandas
-flask 
+flask
 prophet
 google-generativeai
 transformers

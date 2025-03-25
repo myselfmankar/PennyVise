@@ -1,8 +1,8 @@
 from flask import jsonify, Blueprint, request
-from utils.data_utils import get_stock_data, calculate_sma, calculate_daily_percentage_change
-from models.forecast_model import forecast_stock
-from services.gemini_service import get_news_sentiment, analyze_sentiment, get_gemini_answer
-from services.investment_service import get_investment_recommendations 
+from ..utils.data_utils import get_stock_data, calculate_sma, calculate_daily_percentage_change
+from ..models.forecast_model import forecast_stock
+from ..services.gemini_service import get_news_sentiment, analyze_sentiment, get_gemini_answer
+from ..services.investment_service import get_investment_recommendations 
 import pandas as pd
 
 api = Blueprint('api', __name__)
