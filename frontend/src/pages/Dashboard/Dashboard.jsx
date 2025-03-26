@@ -9,7 +9,7 @@ import Navbar from "../../components/Navbar/Navbar";
 
 const Dashboard = () => {
   const { selectedStock, stockData, loading, error, fetchStockData } = useStocks();
-  const defaultStocks = ['AAPL', 'GOOG', 'MSFT', 'AMZN', 'TSLA'];
+  const defaultStocks = ['AAPL', 'GOOG', 'MSFT', 'AMZN', 'TSLA','NSEI', 'TCS.NS', '^NSEBANK'];
 
   useEffect(() => {
     if (!selectedStock) {

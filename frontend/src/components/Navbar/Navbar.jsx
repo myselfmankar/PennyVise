@@ -8,7 +8,7 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.navLeft}>
                 <img src={logoImage} alt="Logo" className={styles.logoImage} />
-                <span className={styles.logo}>GenAI Finance</span>
+                <span className={styles.logo}>PennyVise</span>
             </div>
             <div className={styles.navRight}>
                 <Link to="/" className={styles.navButton}>
