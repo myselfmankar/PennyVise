@@ -5,13 +5,13 @@ WORKDIR /app
 
 RUN ls -l
 
-COPY requirements.txt requirements.txt
+COPY  ./requirements.txt requirements.txt
 
-RUN pip install --no-cache-dir -r app/requirements.txt
+# RUN pip install --no-cache-dir -r app/requirements.txt
 
-COPY . /app/
+# COPY . /app/
 
-EXPOSE 5000
-ENV FLASK_APP=app.py
+# EXPOSE 5000
+# ENV FLASK_APP=app.py
 
 CMD ["flask", "run", "--host=0.0.0.0"]
