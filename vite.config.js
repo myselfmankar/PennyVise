@@ -19,7 +19,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: '13.200.17.183',
+        target: 'https://pennyvise-backend-6d4w.onrender.com',
         changeOrigin: true,
         secure: false,
       }
